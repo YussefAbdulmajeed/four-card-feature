@@ -1,0 +1,151 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* normalization */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    Font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    width: 414px;
+    margin-bottom: 50px;
+}
+
+.top .head1,
+.top .head2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(234, 12%, 34%);
+    font-size: 2em;
+}
+.top .head1 {
+    font-weight: 200;
+}
+.top .head2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.top p {
+    color: hsl(229, 6%, 66%);
+    width: 430px;
+    font-size: 0.825em;
+    text-align-last: center;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, 86px);
+    gap: 30px;
+    margin-left: 12px;
+}
+
+main .container .card {
+    background-color: white;
+    height: 202px;
+    border-radius: 5px;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 5px -2px hsl(229, 6%, 66%);
+}
+
+main .container .cyan {
+    border-top: 5px solid hsl(180, 62%, 55%);
+    grid-row: 2 / span 2;
+}
+main .container .red {
+    border-top: 5px solid hsl(0, 78%, 62%);
+    grid-column: 2;
+}
+main .container .orange {
+    border-top: 5px solid hsl(34, 97%, 64%);
+    grid-row: 3/5;
+    grid-column: 2;
+}
+main .container .blue {
+    border-top: 5px solid hsl(212, 86%, 64%);
+    grid-row: 2 / span 2;
+}
+
+main .container .card h3 {
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 15px;
+}
+
+main .container .card p {
+    color: hsl(229, 6%, 66%);
+    font-size: 0.750em;
+    width: 241px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+div.image {
+    width: 100%;
+    background-color: aqua;
+    position: relative;
+}
+
+div.image img {
+    position: absolute;
+    right: -2px;
+    width: 50px;
+}
+@media (max-width:600px) {
+    .top .head1,
+    .top .head2 {
+        font-size: 1.5em;
+    }
+
+    .top p {
+        width: 271px;
+        font-size: 0.925em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main .container {
+        /* solve with flex */
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+
+        /* solve with grid */
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    main .container .cyan {
+        grid-row: 1 / 2;
+    }
+    main .container .red {
+        grid-row: 2 /3;
+        grid-column: 1;
+    }
+    main .container .orange {
+        grid-row: 3/4;
+        grid-column: 1;
+    }
+    main .container .blue {
+        grid-row: 4 / 5;
+    }
+
+}
+
